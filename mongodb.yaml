@@ -8,21 +8,21 @@
       dest: "/etc/yum.repos.d/mongo.repo"
   - name: install mongodb
     ansible.builtin.package:
-    name: mongodb-org
-    state: present
+      name: mongodb-org
+      state: present
 
   - name: start and enable mongodb
     ansible.builtin.service:
-    name: mongod
-    state: started
-    enable: yes
+      name: mongod
+      state: started
+      enable: yes
   - name: update ipaddress in config file
     ansible.builtin.replace:
-    path: /etc/mongod.conf
-    regexp: '127.0.0.1'
-    replace: '0.0.0.0'
+      path: /etc/mongod.conf
+      regexp: '127.0.0.1'
+      replace: '0.0.0.0'
   - name: start and enable mongodb
     ansible.builtin.service:
-    name: mongod
-    state: restarted
-    
+      name: mongod
+      state: restarted
+      
