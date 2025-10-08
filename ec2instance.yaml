@@ -6,11 +6,12 @@
    sg_id: "sg-037afa32950284ea1"
    zone_id: "Z100089128WOYUCB7KSS2"
    domain_name: "awsdevops2025.fun"
-   instance:
-   - mongodb
-   - rabbitmq
-   - redis
-   - mysql
+   # instance we can give in -e
+  #  instance:
+  #  - mongodb
+  #  - rabbitmq
+  #  - redis
+  #  - mysql
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
