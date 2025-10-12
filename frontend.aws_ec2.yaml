@@ -11,5 +11,5 @@ compose:
 
 keyed_groups:
   - key: tags.Name
-    prefix: "danamic"  # dynamic-frontend
+    prefix: "dynamic"  # dynamic-frontend
     seperator: "-"
