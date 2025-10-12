@@ -1,17 +1,17 @@
-- name: install nginx
-  hosts: dynamic-frontend
-  become: yes
-  tasks:
-  - name: install nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
-
 # - name: install nginx
-#   hosts: dynamic_frontend
+#   hosts: dynamic-frontend
 #   become: yes
 #   tasks:
 #   - name: install nginx
-#     ansible.builtin.dnf:
+#     ansible.builtin.package:
 #       name: nginx
 #       state: present
+
+- name: install nginx
+  hosts: dynamic_frontend
+  become: yes
+  tasks:
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
